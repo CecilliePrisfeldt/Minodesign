@@ -1,0 +1,301 @@
+/* HTML5 display-role reset for older browsers */
+
+
+/* Header
+-----------------------------------------------------------------------------*/
+
+header {
+    overflow: auto;
+}
+
+body {
+    background-color: #f3f1ee;
+}
+
+#navpc {
+    display: none;
+}
+
+#logo {
+    max-width: 50%;
+    display: block;
+    padding: 5%;
+    margin: auto;
+}
+
+#navmobil {
+    display: inline-block;
+    color: #3c312e;
+}
+
+#navpc {
+    display: none;
+    text-decoration: none;
+}
+
+ul>li {
+    color: #3c312e;
+    text-decoration: none;
+}
+
+ul>a {
+    text-decoration: none;
+    color: #3c312e;
+    font-family: "montserrat";
+}
+
+
+/* burgermenu
+____________________________________________________________________________*/
+
+body {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    background: #f3f1ee;
+    font-family: "montserrat";
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#menuclose {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 55px;
+    left: 34px;
+    z-index: 3;
+    cursor: pointer;
+}
+
+#menuToggle {
+    display: block;
+    position: fixed;
+    top: 5%;
+    left: 2%;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+#menuopen {
+    display: block;
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+    -webkit-touch-callout: none;
+}
+
+#menuToggle span {
+    display: block;
+    width: 33px;
+    height: 4px;
+    margin-bottom: 5px;
+    position: relative;
+    background-color: grey;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 4px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+}
+
+#menuToggle span:first-child {
+    transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+}
+
+#menuopen:focus~span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background: #fff;
+}
+
+#menuopen:focus~span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuopen:focus~span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu {
+    position: absolute;
+    width: 300px;
+    height: 100vh;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: #000000;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+}
+
+#menu li {
+    padding: 10px 0;
+    font-size: 22px;
+    margin-top: 10%;
+    text-align: center;
+}
+
+#menu>li>a {
+    color: white;
+    text-decoration: none;
+    font-family: "futura-pt";
+}
+
+#menuopen:focus~ul {
+    transform: none;
+}
+
+
+/*
+ * burgermenu
+ */
+
+
+/* billeder
+____________________________________________________________________________*/
+
+
+/* tekst
+____________________________________________________________________________*/
+
+.overskriften {
+    font-family: "ivyJournal";
+    color: #7c3b1e;
+    size: 6em;
+}
+
+h3 {
+    color: #3c312a;
+    font-size: 0.8em;
+    font-family: "montserrat";
+}
+
+
+/* brødtekst
+____________________________________________________________________________*/
+
+
+/* knap
+-----------------------------------------------------------------------------*/
+
+
+/* video
+-----------------------------------------------------------------------------*/
+
+
+/* Footer
+-----------------------------------------------------------------------------*/
+
+footer {
+    margin-bottom: 5%;
+    color: #3c312a;
+    font-size: 0.9em;
+    font-family: montserrat;
+}
+
+.iconer {
+    max-width: 12%;
+    width: 30%;
+}
+
+
+/* media
+-----------------------------------------------------------------------------*/
+
+@media only screen and (min-width: 768px) {
+    #navpc {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    header {
+        display: block;
+    }
+    body {
+        margin: 3%;
+    }
+    #logo {
+        max-width: 20%;
+        width: 10%;
+        float: left;
+        padding: 5%;
+        margin: auto;
+    }
+    #logo>img {
+        width: 100%;
+        height: 100%;
+    }
+    #navmobil {
+        display: none;
+    }
+    #navpc {
+        margin: auto;
+        float: right;
+        display: flex;
+        padding: 5%;
+    }
+    #navpc>ul {
+        display: flex;
+        justify-content: space-evenly;
+        text-decoration: none;
+    }
+    #navpc>ul>li {
+        margin-bottom: 3%;
+        list-style-type: none;
+        margin-left: 27px;
+    }
+    #navpc>ul>li>a {
+        text-decoration: none;
+        color: #3c312a;
+        font-size: 1em;
+        font-family: Montserrat
+    }
+    #socialemedier {
+        width: 20%;
+    }
+    #showroom {
+        width: 35%;
+    }
+    #navpc>ul>li>a:hover {
+        color: #7c3b1e
+    }
+    #flexfooter {
+        display: flex;
+    }
+    #flexfooter>section {
+        margin: 5%;
+    }
+    footer {
+        margin-bottom: 5%;
+        color: #3c312a;
+        font-size: 0.9em;
+    }
+    .iconer {
+        max-width: 15%;
+        width: 30%;
+        margin-top: 12%;
+        margin-left: 2%;
+    }
+    h1 {
+        font-family: "ivyJournal";
+        color: #7c3b1e;
+        size: 5em;
+        width: 40%;
+    }
+}
